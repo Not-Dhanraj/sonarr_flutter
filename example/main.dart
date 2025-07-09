@@ -1,4 +1,4 @@
-import 'package:sonarr_flutter/sonarr.dart';
+import 'package:sonarr_flutter/sonarr_flutter.dart';
 
 void main() async {
   // The host must include the protocol

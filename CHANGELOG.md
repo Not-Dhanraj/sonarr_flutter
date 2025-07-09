@@ -1,3 +1,5 @@
+# 3.0.1
+- Fixed imports
 # 3.0.0+1
 - Fixed license in Readme
 # 3.0.0
