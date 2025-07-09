@@ -1,8 +1,9 @@
+# 3.0.0+1
+- Fixed license in Readme
 # 3.0.0
 - Renamed Package Name
 - Upgraded to Null Safety
 - Fixed Api Base Url 
-
 # 2.0.1
 - Added support for executing command: `RefreshMonitoredDownloads`
 # 2.0.0
