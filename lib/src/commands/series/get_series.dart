@@ -1,8 +1,9 @@
-part of sonarr_commands;
+part of sonarr_flutter_commands;
 
-Future<SonarrSeries> _commandGetSeries(Dio client, {
-    required int seriesId,
+Future<SonarrSeries> _commandGetSeries(
+  Dio client, {
+  required int seriesId,
 }) async {
-    Response response = await client.get('series/$seriesId');
-    return SonarrSeries.fromJson(response.data);
+  Response response = await client.get('series/$seriesId');
+  return SonarrSeries.fromJson(response.data);
 }

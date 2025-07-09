@@ -1,7 +1,8 @@
-part of sonarr_commands;
+part of sonarr_flutter_commands;
 
-Future<void> _commandDeleteEpisodeFile(Dio client, {
-    required int episodeFileId,
+Future<void> _commandDeleteEpisodeFile(
+  Dio client, {
+  required int episodeFileId,
 }) async {
-    await client.delete('episodefile/${episodeFileId}');
+  await client.delete('episodefile/${episodeFileId}');
 }

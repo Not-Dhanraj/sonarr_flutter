@@ -1,16 +1,16 @@
-# sonarr
+# sonarr_flutter
 
 [![Pubdev][pubdev-shield]][pubdev]
 ![License][license-shield]
 
-Dart library package to facilitate the connection to and from [Sonarr](https://sonarr.tv)'s API, a smart PVR for newsgroup and bittorrent users.
+Dart library package to facilitate the connection to and from [Sonarr](https://sonarr_flutter.tv)'s API, a smart PVR for newsgroup and bittorrent users.
 
 ## Getting Started
 
-In order to use this package, you need to have to fetch your API key from within Sonarr. Please ensure you do not publicly reveal your API key, as it will give any user with access full control of your Sonarr instance. To get started simply import the sonarr package, and initialize a connection to your instance:
+In order to use this package, you need to have to fetch your API key from within Sonarr. Please ensure you do not publicly reveal your API key, as it will give any user with access full control of your Sonarr instance. To get started simply import the sonarr_flutter package, and initialize a connection to your instance:
 
 ```dart
-Sonarr sonarr = Sonarr(host: '<your instance URL>', apiKey: '<your API key>');
+Sonarr sonarr_flutter = Sonarr(host: '<your instance URL>', apiKey: '<your API key>');
 ```
 
 Once initialized, you can access any of the command handlers to quickly and easily make calls to Sonarr. For most calls that return data, model definitions have been created. Typings have also been created for parameters that have a set, finite list of options.
@@ -70,11 +70,11 @@ Dio dio = Dio(
         },
     ),
 );
-Sonarr sonarr = Sonarr.from(dio);
+Sonarr sonarr_flutter = Sonarr.from(dio);
 ```
 
 > You must ensure you set the BaseOptions specified above, specifically `baseUrl` and `queryParameters` otherwise the instance will not be able to create a successful connection to your machine.
 
 [license-shield]: https://img.shields.io/github/license/CometTools/Dart-Packages?style=for-the-badge
-[pubdev]: https://pub.dev/packages/sonarr/
-[pubdev-shield]: https://img.shields.io/pub/v/sonarr.svg?style=for-the-badge
+[pubdev]: https://pub.dev/packages/sonarr_flutter/
+[pubdev-shield]: https://img.shields.io/pub/v/sonarr_flutter.svg?style=for-the-badge

@@ -1,4 +1,4 @@
-part of sonarr_types;
+part of sonarr_flutter_types;
 
 /// Enumerator to handle all series types used in Sonarr.
 enum SonarrSeriesType { STANDARD, DAILY, ANIME }

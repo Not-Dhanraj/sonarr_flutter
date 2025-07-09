@@ -1,9 +1,9 @@
 /// Library containing all logic and accessors to make calls to Sonarr's API.
-library sonarr_commands;
+library sonarr_flutter_commands;
 
 import 'package:dio/dio.dart';
 import 'package:intl/intl.dart';
-import 'package:sonarr/types.dart';
+import 'package:sonarr_flutter/types.dart';
 import 'models.dart';
 
 // Calendar

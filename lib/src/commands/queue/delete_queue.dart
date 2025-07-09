@@ -1,10 +1,12 @@
-part of sonarr_commands;
+part of sonarr_flutter_commands;
 
-Future<void> _commandDeleteQueue(Dio client, {
-    required int id,
-    bool? blacklist,
+Future<void> _commandDeleteQueue(
+  Dio client, {
+  required int id,
+  bool? blacklist,
 }) async {
-    await client.delete('queue/$id', queryParameters: {
-        if(blacklist != null) 'blacklist': blacklist,
-    });
+  await client.delete(
+    'queue/$id',
+    queryParameters: {if (blacklist != null) 'blacklist': blacklist},
+  );
 }

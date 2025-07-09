@@ -1,8 +1,8 @@
-/// Dart library package to facilitate the communication to and from [Sonarr](https://sonarr.tv)'s API:
+/// Dart library package to facilitate the communication to and from [Sonarr](https://sonarr_flutter.tv)'s API:
 /// A smart PVR for newsgroup and bittorrent users.
 ///
-/// This library gives access to [sonarr_commands], and is needed as the only entrypoint.
-library sonarr;
+/// This library gives access to [sonarr_flutter_commands], and is needed as the only entrypoint.
+library sonarr_flutter;
 
 // Imports
 import 'package:dio/dio.dart';

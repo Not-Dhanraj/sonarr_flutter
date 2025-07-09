@@ -1,8 +1,9 @@
-part of sonarr_commands;
+part of sonarr_flutter_commands;
 
-Future<SonarrEpisode> _commandGetEpisode(Dio client, {
-    required int episodeId,
+Future<SonarrEpisode> _commandGetEpisode(
+  Dio client, {
+  required int episodeId,
 }) async {
-    Response response = await client.get('episode/${episodeId}');
-    return SonarrEpisode.fromJson(response.data);
+  Response response = await client.get('episode/${episodeId}');
+  return SonarrEpisode.fromJson(response.data);
 }

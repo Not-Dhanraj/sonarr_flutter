@@ -1,4 +1,4 @@
-part of sonarr_types;
+part of sonarr_flutter_types;
 
 /// Enumerator to handle all history event types used in Sonarr.
 enum SonarrHistoryEventType {

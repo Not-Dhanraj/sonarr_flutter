@@ -1,4 +1,4 @@
-part of sonarr_types;
+part of sonarr_flutter_types;
 
 enum SonarrSortDirection { ASCENDING, DESCENDING }
 

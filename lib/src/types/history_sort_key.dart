@@ -1,4 +1,4 @@
-part of sonarr_types;
+part of sonarr_flutter_types;
 
 enum SonarrHistorySortKey { DATE, SERIES_TITLE }
 
