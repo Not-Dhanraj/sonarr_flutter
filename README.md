@@ -75,6 +75,6 @@ Sonarr sonarr_flutter = Sonarr.from(dio);
 
 > You must ensure you set the BaseOptions specified above, specifically `baseUrl` and `queryParameters` otherwise the instance will not be able to create a successful connection to your machine.
 
-[license-shield]: https://img.shields.io/github/license/CometTools/Dart-Packages?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/Not-Dhanraj/sonarr_flutter?style=for-the-badge
 [pubdev]: https://pub.dev/packages/sonarr_flutter/
 [pubdev-shield]: https://img.shields.io/pub/v/sonarr_flutter.svg?style=for-the-badge
