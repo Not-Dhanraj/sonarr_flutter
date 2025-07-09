@@ -60,7 +60,7 @@ class Sonarr {
     // Build the HTTP client
     Dio _dio = Dio(
       BaseOptions(
-        baseUrl: host.endsWith('/') ? '${host}api/' : '$host/api/',
+        baseUrl: host.endsWith('/') ? '${host}api/v3/' : '$host/api/v3/',
         queryParameters: {'apikey': apiKey},
         headers: headers,
         followRedirects: followRedirects,
