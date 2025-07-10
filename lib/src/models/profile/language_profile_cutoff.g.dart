@@ -7,16 +7,12 @@ part of 'language_profile_cutoff.dart';
 // **************************************************************************
 
 SonarrLanguageProfileCutoff _$SonarrLanguageProfileCutoffFromJson(
-    Map<String, dynamic> json) {
-  return SonarrLanguageProfileCutoff(
-    id: json['id'] as int?,
-    name: json['name'] as String?,
-  );
-}
+  Map<String, dynamic> json,
+) => SonarrLanguageProfileCutoff(
+  id: (json['id'] as num?)?.toInt(),
+  name: json['name'] as String?,
+);
 
 Map<String, dynamic> _$SonarrLanguageProfileCutoffToJson(
-        SonarrLanguageProfileCutoff instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-    };
+  SonarrLanguageProfileCutoff instance,
+) => <String, dynamic>{'id': instance.id, 'name': instance.name};

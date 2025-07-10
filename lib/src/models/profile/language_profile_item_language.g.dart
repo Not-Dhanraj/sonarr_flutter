@@ -7,16 +7,12 @@ part of 'language_profile_item_language.dart';
 // **************************************************************************
 
 SonarrLanguageProfileItemLanguage _$SonarrLanguageProfileItemLanguageFromJson(
-    Map<String, dynamic> json) {
-  return SonarrLanguageProfileItemLanguage(
-    id: json['id'] as int?,
-    name: json['name'] as String?,
-  );
-}
+  Map<String, dynamic> json,
+) => SonarrLanguageProfileItemLanguage(
+  id: (json['id'] as num?)?.toInt(),
+  name: json['name'] as String?,
+);
 
 Map<String, dynamic> _$SonarrLanguageProfileItemLanguageToJson(
-        SonarrLanguageProfileItemLanguage instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-    };
+  SonarrLanguageProfileItemLanguage instance,
+) => <String, dynamic>{'id': instance.id, 'name': instance.name};

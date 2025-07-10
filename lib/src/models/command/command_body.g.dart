@@ -6,20 +6,19 @@ part of 'command_body.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-SonarrCommandBody _$SonarrCommandBodyFromJson(Map<String, dynamic> json) {
-  return SonarrCommandBody(
-    seriesId: json['seriesId'] as int?,
-    isNewSeries: json['isNewSeries'] as bool?,
-    sendUpdatesToClient: json['sendUpdatesToClient'] as bool?,
-    updateScheduledTask: json['updateScheduledTask'] as bool?,
-    completionMessage: json['completionMessage'] as String?,
-    requiresDiskAccess: json['requiresDiskAccess'] as bool?,
-    isExclusive: json['isExclusive'] as bool?,
-    name: json['name'] as String?,
-    trigger: json['trigger'] as String?,
-    suppressMessages: json['suppressMessages'] as bool?,
-  )..type = json['type'] as String?;
-}
+SonarrCommandBody _$SonarrCommandBodyFromJson(Map<String, dynamic> json) =>
+    SonarrCommandBody(
+      seriesId: (json['seriesId'] as num?)?.toInt(),
+      isNewSeries: json['isNewSeries'] as bool?,
+      sendUpdatesToClient: json['sendUpdatesToClient'] as bool?,
+      updateScheduledTask: json['updateScheduledTask'] as bool?,
+      completionMessage: json['completionMessage'] as String?,
+      requiresDiskAccess: json['requiresDiskAccess'] as bool?,
+      isExclusive: json['isExclusive'] as bool?,
+      name: json['name'] as String?,
+      trigger: json['trigger'] as String?,
+      suppressMessages: json['suppressMessages'] as bool?,
+    )..type = json['type'] as String?;
 
 Map<String, dynamic> _$SonarrCommandBodyToJson(SonarrCommandBody instance) =>
     <String, dynamic>{

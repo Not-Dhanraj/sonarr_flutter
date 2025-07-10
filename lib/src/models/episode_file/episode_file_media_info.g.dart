@@ -7,18 +7,17 @@ part of 'episode_file_media_info.dart';
 // **************************************************************************
 
 SonarrEpisodeFileMediaInfo _$SonarrEpisodeFileMediaInfoFromJson(
-    Map<String, dynamic> json) {
-  return SonarrEpisodeFileMediaInfo(
-    audioChannels: (json['audioChannels'] as num?)?.toDouble(),
-    audioCodec: json['audioCodec'] as String?,
-    videoCodec: json['videoCodec'] as String?,
-  );
-}
+  Map<String, dynamic> json,
+) => SonarrEpisodeFileMediaInfo(
+  audioChannels: (json['audioChannels'] as num?)?.toDouble(),
+  audioCodec: json['audioCodec'] as String?,
+  videoCodec: json['videoCodec'] as String?,
+);
 
 Map<String, dynamic> _$SonarrEpisodeFileMediaInfoToJson(
-        SonarrEpisodeFileMediaInfo instance) =>
-    <String, dynamic>{
-      'audioChannels': instance.audioChannels,
-      'audioCodec': instance.audioCodec,
-      'videoCodec': instance.videoCodec,
-    };
+  SonarrEpisodeFileMediaInfo instance,
+) => <String, dynamic>{
+  'audioChannels': instance.audioChannels,
+  'audioCodec': instance.audioCodec,
+  'videoCodec': instance.videoCodec,
+};

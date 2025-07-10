@@ -7,22 +7,23 @@ part of 'episode_file_quality.dart';
 // **************************************************************************
 
 SonarrEpisodeFileQuality _$SonarrEpisodeFileQualityFromJson(
-    Map<String, dynamic> json) {
-  return SonarrEpisodeFileQuality(
-    quality: json['quality'] == null
-        ? null
-        : SonarrEpisodeFileQualityQuality.fromJson(
-            json['quality'] as Map<String, dynamic>),
-    revision: json['revision'] == null
-        ? null
-        : SonarrEpisodeFileQualityRevision.fromJson(
-            json['revision'] as Map<String, dynamic>),
-  );
-}
+  Map<String, dynamic> json,
+) => SonarrEpisodeFileQuality(
+  quality: json['quality'] == null
+      ? null
+      : SonarrEpisodeFileQualityQuality.fromJson(
+          json['quality'] as Map<String, dynamic>,
+        ),
+  revision: json['revision'] == null
+      ? null
+      : SonarrEpisodeFileQualityRevision.fromJson(
+          json['revision'] as Map<String, dynamic>,
+        ),
+);
 
 Map<String, dynamic> _$SonarrEpisodeFileQualityToJson(
-        SonarrEpisodeFileQuality instance) =>
-    <String, dynamic>{
-      'quality': instance.quality?.toJson(),
-      'revision': instance.revision?.toJson(),
-    };
+  SonarrEpisodeFileQuality instance,
+) => <String, dynamic>{
+  'quality': instance.quality?.toJson(),
+  'revision': instance.revision?.toJson(),
+};

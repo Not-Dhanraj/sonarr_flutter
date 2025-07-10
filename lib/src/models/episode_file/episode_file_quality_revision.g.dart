@@ -7,18 +7,17 @@ part of 'episode_file_quality_revision.dart';
 // **************************************************************************
 
 SonarrEpisodeFileQualityRevision _$SonarrEpisodeFileQualityRevisionFromJson(
-    Map<String, dynamic> json) {
-  return SonarrEpisodeFileQualityRevision(
-    version: json['version'] as int?,
-    real: json['real'] as int?,
-    isRepack: json['isRepack'] as bool?,
-  );
-}
+  Map<String, dynamic> json,
+) => SonarrEpisodeFileQualityRevision(
+  version: (json['version'] as num?)?.toInt(),
+  real: (json['real'] as num?)?.toInt(),
+  isRepack: json['isRepack'] as bool?,
+);
 
 Map<String, dynamic> _$SonarrEpisodeFileQualityRevisionToJson(
-        SonarrEpisodeFileQualityRevision instance) =>
-    <String, dynamic>{
-      'version': instance.version,
-      'real': instance.real,
-      'isRepack': instance.isRepack,
-    };
+  SonarrEpisodeFileQualityRevision instance,
+) => <String, dynamic>{
+  'version': instance.version,
+  'real': instance.real,
+  'isRepack': instance.isRepack,
+};

@@ -6,29 +6,29 @@ part of 'episode.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-SonarrEpisode _$SonarrEpisodeFromJson(Map<String, dynamic> json) {
-  return SonarrEpisode(
-    seriesId: json['seriesId'] as int?,
-    episodeFileId: json['episodeFileId'] as int?,
-    seasonNumber: json['seasonNumber'] as int?,
-    episodeNumber: json['episodeNumber'] as int?,
-    title: json['title'] as String?,
-    airDate: json['airDate'] as String?,
-    airDateUtc: SonarrUtilities.dateTimeFromJson(json['airDateUtc'] as String?),
-    overview: json['overview'] as String?,
-    episodeFile: json['episodeFile'] == null
-        ? null
-        : SonarrEpisodeFile.fromJson(
-            json['episodeFile'] as Map<String, dynamic>),
-    hasFile: json['hasFile'] as bool?,
-    monitored: json['monitored'] as bool?,
-    absoluteEpisodeNumber: json['absoluteEpisodeNumber'] as int?,
-    unverifiedSceneNumbering: json['unverifiedSceneNumbering'] as bool?,
-    lastSearchTime:
-        SonarrUtilities.dateTimeFromJson(json['lastSearchTime'] as String?),
-    id: json['id'] as int?,
-  );
-}
+SonarrEpisode _$SonarrEpisodeFromJson(
+  Map<String, dynamic> json,
+) => SonarrEpisode(
+  seriesId: (json['seriesId'] as num?)?.toInt(),
+  episodeFileId: (json['episodeFileId'] as num?)?.toInt(),
+  seasonNumber: (json['seasonNumber'] as num?)?.toInt(),
+  episodeNumber: (json['episodeNumber'] as num?)?.toInt(),
+  title: json['title'] as String?,
+  airDate: json['airDate'] as String?,
+  airDateUtc: SonarrUtilities.dateTimeFromJson(json['airDateUtc'] as String?),
+  overview: json['overview'] as String?,
+  episodeFile: json['episodeFile'] == null
+      ? null
+      : SonarrEpisodeFile.fromJson(json['episodeFile'] as Map<String, dynamic>),
+  hasFile: json['hasFile'] as bool?,
+  monitored: json['monitored'] as bool?,
+  absoluteEpisodeNumber: (json['absoluteEpisodeNumber'] as num?)?.toInt(),
+  unverifiedSceneNumbering: json['unverifiedSceneNumbering'] as bool?,
+  lastSearchTime: SonarrUtilities.dateTimeFromJson(
+    json['lastSearchTime'] as String?,
+  ),
+  id: (json['id'] as num?)?.toInt(),
+);
 
 Map<String, dynamic> _$SonarrEpisodeToJson(SonarrEpisode instance) =>
     <String, dynamic>{

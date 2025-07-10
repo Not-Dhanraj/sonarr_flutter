@@ -30,6 +30,8 @@ Future<SonarrSeries> _commandAddSeries(
       rootFolderPath == null,
       'path and rootFolderPath cannot both be defined',
     );
+  var srUrl = client.options.baseUrl;
+  print(srUrl);
   Response response = await client.post(
     'series',
     data: {

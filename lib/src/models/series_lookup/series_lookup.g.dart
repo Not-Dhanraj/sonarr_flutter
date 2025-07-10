@@ -6,53 +6,54 @@ part of 'series_lookup.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-SonarrSeriesLookup _$SonarrSeriesLookupFromJson(Map<String, dynamic> json) {
-  return SonarrSeriesLookup(
-    title: json['title'] as String?,
-    sortTitle: json['sortTitle'] as String?,
-    seasonCount: json['seasonCount'] as int?,
-    status: json['status'] as String?,
-    overview: json['overview'] as String?,
-    network: json['network'] as String?,
-    airTime: json['airTime'] as String?,
-    images: (json['images'] as List<dynamic>?)
-        ?.map((e) => SonarrSeriesImage.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    remotePoster: json['remotePoster'] as String?,
-    seasons: (json['seasons'] as List<dynamic>?)
-        ?.map((e) => SonarrSeriesSeason.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    year: json['year'] as int?,
-    path: json['path'] as String?,
-    profileId: json['profileId'] as int?,
-    languageProfileId: json['languageProfileId'] as int?,
-    seasonFolder: json['seasonFolder'] as bool?,
-    monitored: json['monitored'] as bool?,
-    useSceneNumbering: json['useSceneNumbering'] as bool?,
-    runtime: json['runtime'] as int?,
-    tvdbId: json['tvdbId'] as int?,
-    tvRageId: json['tvRageId'] as int?,
-    tvMazeId: json['tvMazeId'] as int?,
-    firstAired: SonarrUtilities.dateTimeFromJson(json['firstAired'] as String?),
-    lastInfoSync:
-        SonarrUtilities.dateTimeFromJson(json['lastInfoSync'] as String?),
-    seriesType:
-        SonarrUtilities.seriesTypeFromJson(json['seriesType'] as String?),
-    cleanTitle: json['cleanTitle'] as String?,
-    imdbId: json['imdbId'] as String?,
-    titleSlug: json['titleSlug'] as String?,
-    certification: json['certification'] as String?,
-    genres:
-        (json['genres'] as List<dynamic>?)?.map((e) => e as String).toList(),
-    tags: (json['tags'] as List<dynamic>?)?.map((e) => e as int).toList(),
-    added: SonarrUtilities.dateTimeFromJson(json['added'] as String?),
-    ratings: json['ratings'] == null
-        ? null
-        : SonarrSeriesRating.fromJson(json['ratings'] as Map<String, dynamic>),
-    qualityProfileId: json['qualityProfileId'] as int?,
-    id: json['id'] as int?,
-  )..rootFolderPath = json['rootFolderPath'] as String?;
-}
+SonarrSeriesLookup _$SonarrSeriesLookupFromJson(
+  Map<String, dynamic> json,
+) => SonarrSeriesLookup(
+  title: json['title'] as String?,
+  sortTitle: json['sortTitle'] as String?,
+  seasonCount: (json['seasonCount'] as num?)?.toInt(),
+  status: json['status'] as String?,
+  overview: json['overview'] as String?,
+  network: json['network'] as String?,
+  airTime: json['airTime'] as String?,
+  images: (json['images'] as List<dynamic>?)
+      ?.map((e) => SonarrSeriesImage.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  remotePoster: json['remotePoster'] as String?,
+  seasons: (json['seasons'] as List<dynamic>?)
+      ?.map((e) => SonarrSeriesSeason.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  year: (json['year'] as num?)?.toInt(),
+  path: json['path'] as String?,
+  profileId: (json['profileId'] as num?)?.toInt(),
+  languageProfileId: (json['languageProfileId'] as num?)?.toInt(),
+  seasonFolder: json['seasonFolder'] as bool?,
+  monitored: json['monitored'] as bool?,
+  useSceneNumbering: json['useSceneNumbering'] as bool?,
+  runtime: (json['runtime'] as num?)?.toInt(),
+  tvdbId: (json['tvdbId'] as num?)?.toInt(),
+  tvRageId: (json['tvRageId'] as num?)?.toInt(),
+  tvMazeId: (json['tvMazeId'] as num?)?.toInt(),
+  firstAired: SonarrUtilities.dateTimeFromJson(json['firstAired'] as String?),
+  lastInfoSync: SonarrUtilities.dateTimeFromJson(
+    json['lastInfoSync'] as String?,
+  ),
+  seriesType: SonarrUtilities.seriesTypeFromJson(json['seriesType'] as String?),
+  cleanTitle: json['cleanTitle'] as String?,
+  imdbId: json['imdbId'] as String?,
+  titleSlug: json['titleSlug'] as String?,
+  certification: json['certification'] as String?,
+  genres: (json['genres'] as List<dynamic>?)?.map((e) => e as String).toList(),
+  tags: (json['tags'] as List<dynamic>?)
+      ?.map((e) => (e as num).toInt())
+      .toList(),
+  added: SonarrUtilities.dateTimeFromJson(json['added'] as String?),
+  ratings: json['ratings'] == null
+      ? null
+      : SonarrSeriesRating.fromJson(json['ratings'] as Map<String, dynamic>),
+  qualityProfileId: (json['qualityProfileId'] as num?)?.toInt(),
+  id: (json['id'] as num?)?.toInt(),
+)..rootFolderPath = json['rootFolderPath'] as String?;
 
 Map<String, dynamic> _$SonarrSeriesLookupToJson(SonarrSeriesLookup instance) =>
     <String, dynamic>{

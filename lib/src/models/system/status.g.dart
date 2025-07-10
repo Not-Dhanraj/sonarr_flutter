@@ -6,31 +6,29 @@ part of 'status.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-SonarrStatus _$SonarrStatusFromJson(Map<String, dynamic> json) {
-  return SonarrStatus(
-    version: json['version'] as String?,
-    buildTime: SonarrUtilities.dateTimeFromJson(json['buildTime'] as String?),
-    isDebug: json['isDebug'] as bool?,
-    isProduction: json['isProduction'] as bool?,
-    isAdmin: json['isAdmin'] as bool?,
-    isUserInteractive: json['isUserInteractive'] as bool?,
-    startupPath: json['startupPath'] as String?,
-    appData: json['appData'] as String?,
-    osName: json['osName'] as String?,
-    osVersion: json['osVersion'] as String?,
-    isMonoRuntime: json['isMonoRuntime'] as bool?,
-    isMono: json['isMono'] as bool?,
-    isLinux: json['isLinux'] as bool?,
-    isOsx: json['isOsx'] as bool?,
-    isWindows: json['isWindows'] as bool?,
-    branch: json['branch'] as String?,
-    authentication: json['authentication'] as String?,
-    sqliteVersion: json['sqliteVersion'] as String?,
-    urlBase: json['urlBase'] as String?,
-    runtimeVersion: json['runtimeVersion'] as String?,
-    runtimeName: json['runtimeName'] as String?,
-  );
-}
+SonarrStatus _$SonarrStatusFromJson(Map<String, dynamic> json) => SonarrStatus(
+  version: json['version'] as String?,
+  buildTime: SonarrUtilities.dateTimeFromJson(json['buildTime'] as String?),
+  isDebug: json['isDebug'] as bool?,
+  isProduction: json['isProduction'] as bool?,
+  isAdmin: json['isAdmin'] as bool?,
+  isUserInteractive: json['isUserInteractive'] as bool?,
+  startupPath: json['startupPath'] as String?,
+  appData: json['appData'] as String?,
+  osName: json['osName'] as String?,
+  osVersion: json['osVersion'] as String?,
+  isMonoRuntime: json['isMonoRuntime'] as bool?,
+  isMono: json['isMono'] as bool?,
+  isLinux: json['isLinux'] as bool?,
+  isOsx: json['isOsx'] as bool?,
+  isWindows: json['isWindows'] as bool?,
+  branch: json['branch'] as String?,
+  authentication: json['authentication'] as String?,
+  sqliteVersion: json['sqliteVersion'] as String?,
+  urlBase: json['urlBase'] as String?,
+  runtimeVersion: json['runtimeVersion'] as String?,
+  runtimeName: json['runtimeName'] as String?,
+);
 
 Map<String, dynamic> _$SonarrStatusToJson(SonarrStatus instance) =>
     <String, dynamic>{
