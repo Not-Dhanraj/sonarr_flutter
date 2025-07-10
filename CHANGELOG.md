@@ -1,3 +1,7 @@
+# 3.0.3
+- Added `SonarrMonitorType` enum to improve type safety for the `monitorMode` parameter in `addSeries`
+- Updated `addSeries` method to accept `SonarrMonitorType` instead of a string for the `monitorMode` parameter
+
 # 3.0.2
 - Fixed error in `deleteSeries` where response handling caused "Error: type 'String' is not a subtype of type 'Map<String, dynamic>'"
 - Changed `deleteSeries` return type to `bool` to indicate success or failure

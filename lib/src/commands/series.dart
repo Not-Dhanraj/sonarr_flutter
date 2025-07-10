@@ -41,7 +41,7 @@ class SonarrCommandHandler_Series {
     required SonarrSeriesType seriesType,
     required int languageProfileId,
     required String rootFolderPath,
-    String monitorMode = 'future',
+    SonarrMonitorType monitorMode = SonarrMonitorType.FUTURE,
     bool seasonFolder = true,
     bool monitored = true,
     bool searchForCutoffUnmetEpisodes = false,
@@ -58,7 +58,7 @@ class SonarrCommandHandler_Series {
     seasonFolder: seasonFolder,
     monitored: monitored,
     seriesType: seriesType,
-    monitorMode: monitorMode,
+    monitorMode: monitorMode.value,
     searchForCutoffUnmetEpisodes: searchForCutoffUnmetEpisodes,
     searchForMissingEpisodes: searchForMissingEpisodes,
   );
