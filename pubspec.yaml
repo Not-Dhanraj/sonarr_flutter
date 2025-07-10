@@ -1,7 +1,7 @@
 name: sonarr_flutter
 description: Facilitate the communication to and from Sonarr's API, a smart PVR
   for newsgroup and bittorrent users.
-version: 3.0.1
+version: 3.0.2
 homepage: https://github.com/Not-Dhanraj/sonarr_flutter
 repository: https://github.com/Not-Dhanraj/sonarr_flutter
 issue_tracker: https://github.com/Not-Dhanraj/sonarr_flutter/issues

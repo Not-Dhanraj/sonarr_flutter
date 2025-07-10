@@ -72,7 +72,9 @@ class SonarrCommandHandler_Series {
   ///
   /// Optional Parameters:
   /// - `deleteFiles`: If true, will delete all files as well
-  Future<SonarrSeries> deleteSeries({
+  ///
+  /// Returns a boolean indicating if the deletion was successful
+  Future<bool> deleteSeries({
     required int seriesId,
     bool deleteFiles = false,
   }) async => _commandDeleteSeries(

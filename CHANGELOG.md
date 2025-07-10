@@ -1,3 +1,7 @@
+# 3.0.2
+- Fixed error in `deleteSeries` where response handling caused "Error: type 'String' is not a subtype of type 'Map<String, dynamic>'"
+- Changed `deleteSeries` return type to `bool` to indicate success or failure
+- Fixed error in `addSeries.dart` as it was returning 404
 # 3.0.1
 - Fixed imports
 # 3.0.0+1

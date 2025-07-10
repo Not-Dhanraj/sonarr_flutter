@@ -1,13 +1,21 @@
 part of sonarr_flutter_commands;
 
-Future<SonarrSeries> _commandDeleteSeries(
+Future<bool> _commandDeleteSeries(
   Dio client, {
   required int seriesId,
   bool deleteFiles = false,
 }) async {
-  Response response = await client.delete(
-    'series/$seriesId',
-    queryParameters: {'deleteFiles': deleteFiles},
-  );
-  return SonarrSeries.fromJson(response.data);
+  try {
+    Response response = await client.delete(
+      'series/$seriesId',
+      queryParameters: {'deleteFiles': deleteFiles},
+    );
+    // Return true if the delete was successful
+    return response.statusCode == 200 ||
+        response.statusCode == 202 ||
+        response.statusCode == 204;
+  } catch (e) {
+    // If there's an exception, return false to indicate failure
+    return false;
+  }
 }
