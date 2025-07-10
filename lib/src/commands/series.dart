@@ -30,44 +30,36 @@ class SonarrCommandHandler_Series {
   /// - `seasonFolder`: Should this series use season folders?
   /// - `monitored`: Should this series be monitored?
   /// - `ignoreEpisodesWithFiles`: If true, automatically ignore episodes that already have episodes
-  /// - `ignoreEpisodesWithoutFiles`: If true, automatically ignore episodes that do not have episodes
+  /// - `searchForCutoffUnmetEpisodes`: If true, automatically ignore episodes that do not have episodes
   /// - `searchForMissingEpisodes`: If true, start searching for all missing episodes after adding
   Future<SonarrSeries> addSeries({
     required int tvdbId,
-    required int profileId,
+    required int qualityProfileId,
     required String title,
-    required String titleSlug,
     required List<SonarrSeriesImage> images,
     required List<SonarrSeriesSeason> seasons,
     required SonarrSeriesType seriesType,
-    int? languageProfileId,
-    List<int>? tags,
-    String? path,
-    String? rootFolderPath,
-    int? tvRageId,
+    required int languageProfileId,
+    required String rootFolderPath,
+    String monitorMode = 'future',
     bool seasonFolder = true,
     bool monitored = true,
-    bool ignoreEpisodesWithFiles = false,
-    bool ignoreEpisodesWithoutFiles = false,
+    bool searchForCutoffUnmetEpisodes = false,
     bool searchForMissingEpisodes = false,
   }) async => _commandAddSeries(
     _client,
     tvdbId: tvdbId,
-    profileId: profileId,
+    qualityProfileId: qualityProfileId,
     languageProfileId: languageProfileId,
     title: title,
-    titleSlug: titleSlug,
     images: images,
     seasons: seasons,
-    path: path,
     rootFolderPath: rootFolderPath,
-    tvRageId: tvRageId,
     seasonFolder: seasonFolder,
     monitored: monitored,
     seriesType: seriesType,
-    tags: tags,
-    ignoreEpisodesWithFiles: ignoreEpisodesWithFiles,
-    ignoreEpisodesWithoutFiles: ignoreEpisodesWithoutFiles,
+    monitorMode: monitorMode,
+    searchForCutoffUnmetEpisodes: searchForCutoffUnmetEpisodes,
     searchForMissingEpisodes: searchForMissingEpisodes,
   );
 

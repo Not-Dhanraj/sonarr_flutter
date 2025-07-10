@@ -10,16 +10,10 @@ SonarrSeriesSeason _$SonarrSeriesSeasonFromJson(Map<String, dynamic> json) =>
     SonarrSeriesSeason(
       seasonNumber: (json['seasonNumber'] as num?)?.toInt(),
       monitored: json['monitored'] as bool?,
-      statistics: json['statistics'] == null
-          ? null
-          : SonarrSeriesSeasonStatistics.fromJson(
-              json['statistics'] as Map<String, dynamic>,
-            ),
     );
 
 Map<String, dynamic> _$SonarrSeriesSeasonToJson(SonarrSeriesSeason instance) =>
     <String, dynamic>{
       'seasonNumber': instance.seasonNumber,
       'monitored': instance.monitored,
-      'statistics': instance.statistics?.toJson(),
     };
