@@ -40,7 +40,6 @@ part 'src/commands/history/get_history.dart';
 
 // Profile
 part 'src/commands/profile.dart';
-part 'src/commands/profile/get_language_profiles.dart';
 part 'src/commands/profile/get_quality_profiles.dart';
 
 // Queue

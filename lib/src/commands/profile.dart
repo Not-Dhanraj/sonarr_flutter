@@ -14,12 +14,4 @@ class SonarrCommandHandler_Profile {
   /// Returns a list of all quality profiles.
   Future<List<SonarrQualityProfile>> getQualityProfiles() async =>
       _commandGetQualityProfiles(_client);
-
-  /// Handler for [language profile](https://github.com/Sonarr/Sonarr/wiki/Profile#get).
-  ///
-  /// Returns a list of all language profiles.
-  ///
-  /// **REQUIRES SONARR V3**
-  Future<List<SonarrLanguageProfile>> getLanguageProfiles() async =>
-      _commandGetLanguageProfiles(_client);
 }
