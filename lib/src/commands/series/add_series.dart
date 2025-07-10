@@ -10,7 +10,6 @@ Future<SonarrSeries> _commandAddSeries(
   required SonarrSeriesType seriesType,
   required String rootFolderPath,
   required String monitorMode,
-  int? languageProfileId,
   bool seasonFolder = true,
   bool monitored = true,
   bool searchForCutoffUnmetEpisodes = false,
@@ -27,7 +26,6 @@ Future<SonarrSeries> _commandAddSeries(
       'monitored': monitored,
       'tvdbId': tvdbId,
       'seriesType': seriesType.name.toLowerCase(),
-      'languageProfileId': languageProfileId,
       "addOptions": {
         "monitor": monitorMode,
         "searchForMissingEpisodes": searchForMissingEpisodes,

@@ -62,8 +62,6 @@ class SonarrSeriesLookup {
   int? profileId;
 
   /// If the series is already added, the language profile identifier
-  @JsonKey(name: 'languageProfileId')
-  int? languageProfileId;
 
   /// Are season folders being used?
   @JsonKey(name: 'seasonFolder')
@@ -178,7 +176,6 @@ class SonarrSeriesLookup {
     this.year,
     this.path,
     this.profileId,
-    this.languageProfileId,
     this.seasonFolder,
     this.monitored,
     this.useSceneNumbering,
