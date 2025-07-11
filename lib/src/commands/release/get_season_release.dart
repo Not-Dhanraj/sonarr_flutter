@@ -6,7 +6,7 @@ Future<List<SonarrRelease>> _commandGetSeasonReleases(
   required int seasonNumber,
 }) async {
   Response response = await client.get(
-    'v3/release',
+    'release',
     queryParameters: {'seriesId': seriesId, 'seasonNumber': seasonNumber},
   );
   return (response.data as List)

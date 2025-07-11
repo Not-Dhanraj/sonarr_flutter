@@ -8,7 +8,8 @@ void main() async {
   String key = '';
 
   Sonarr api = Sonarr(host: host, apiKey: key);
-
+  var tst = await api.release.getSeasonReleases(seriesId: 70, seasonNumber: 6);
+  print(tst.toString());
   // Get a specific series
   // api.series.getSeries(seriesId: 27).then((data) => print(data));
 
