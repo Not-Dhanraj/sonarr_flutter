@@ -36,27 +36,16 @@ class SonarrCommandHandler_Release {
     seasonNumber: seasonNumber,
   );
 
-  /// Handler for [release](https://github.com/Sonarr/Sonarr/wiki/Release#post).
+  /// Handler for [release](https://sonarr.tv/docs/api).
   ///
   /// Adds a previously searched release to the download client, if the release is still in Sonarr's search cache (30 minute cache).
   /// If the release is not found in the cache Sonarr will return a 404.
   ///
-  /// > **`useVersion3` is required to push season releases.**
-  ///
   /// Required Parameters:
   /// - `guid`: Release GUID
   /// - `indexerId`: Indentifier for the indexer
-  ///
-  /// Optional Parameters:
-  /// - `useVersion3`: Push the release using Sonarr v3's route.
   Future<SonarrAddedRelease> addRelease({
     required String guid,
     required int indexerId,
-    bool useVersion3 = false,
-  }) async => _commandAddRelease(
-    _client,
-    guid: guid,
-    indexerId: indexerId,
-    useVersion3: useVersion3,
-  );
+  }) async => _commandAddRelease(_client, guid: guid, indexerId: indexerId);
 }

@@ -16,7 +16,6 @@ class SonarrCommandHandler_Series {
   /// Required Parameters:
   /// - `tvdbId`: TVDB identifier for the series
   /// - `profileId`: Quality profile identifier
-  /// - `languageProfileId`: Language profile identifier (if using Sonarr v2, pass null)
   /// - `title`: Title of the series
   /// - `titleSlug`: Title slug of the series
   /// - `images`: List of [SonarrSeriesImage] objects containing the image information

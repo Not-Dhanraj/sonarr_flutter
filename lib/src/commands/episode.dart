@@ -36,4 +36,20 @@ class SonarrCommandHandler_Episode {
   /// - `episode`: [SonarrEpisode] object containing the updated episode
   Future<SonarrEpisode> updateEpisode({required SonarrEpisode episode}) async =>
       _commandUpdateEpisode(_client, episode: episode);
+
+  /// Handler for [v3/episode/monitor](https://sonarr.tv/docs/api).
+  ///
+  /// Set the monitored flag for multiple episodes.
+  ///
+  /// Required Parameters:
+  /// - `episodeIds`: List of episode IDs to change monitored status for
+  /// - `monitored`: Boolean value to set monitored flag to
+  Future<void> monitorEpisodes({
+    required List<int> episodeIds,
+    required bool monitored,
+  }) async => _commandMonitorEpisode(
+    _client,
+    episodeIds: episodeIds,
+    monitored: monitored,
+  );
 }

@@ -25,10 +25,6 @@ export 'src/models/history/history_record.dart';
 export 'src/models/history/history_record_data.dart';
 
 /// Profile
-export 'src/models/profile/language_profile_cutoff.dart';
-export 'src/models/profile/language_profile_item.dart';
-export 'src/models/profile/language_profile_item_language.dart';
-export 'src/models/profile/language_profile.dart';
 export 'src/models/profile/quality_profile_cutoff.dart';
 export 'src/models/profile/quality_profile_item_quality.dart';
 export 'src/models/profile/quality_profile_item.dart';

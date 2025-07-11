@@ -1,3 +1,11 @@
+# 3.0.5
+- Added `monitorEpisodes` method to support the `/api/v3/episode/monitor` endpoint
+- This endpoint allows changing the monitored status of multiple episodes at once
+
+# 3.0.4
+- Removed deprecated language profile models and exports to align with Sonarr v3 API
+- Removed reference to deprecated `languageProfileId` parameter in `series.dart` documentation
+
 # 3.0.3
 - Added `SonarrMonitorType` enum to improve type safety for the `monitorMode` parameter in `addSeries`
 - Updated `addSeries` method to accept `SonarrMonitorType` instead of a string for the `monitorMode` parameter

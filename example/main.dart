@@ -6,8 +6,29 @@ void main() async {
   String host = '';
   // Your key can be fetched from the Sonarr web GUI
   String key = '';
+
   Sonarr api = Sonarr(host: host, apiKey: key);
 
-  // var a=(api.series.getAllSeries());
-  api.series.getSeries(seriesId: 1).then((data) => print(data));
+  // Get a specific series
+  api.series.getSeries(seriesId: 27).then((data) => print(data));
+
+  // Example: Get all episodes for a series
+  api.episode.getSeriesEpisodes(seriesId: 27).then((episodes) {
+    // Get the IDs of all episodes in season 1
+    List<int> season1EpisodeIds = episodes
+        .where((episode) => episode.seasonNumber == 1 && episode.id != null)
+        .map((episode) => episode.id!)
+        .toList();
+
+    print(season1EpisodeIds.toString());
+
+    // Set all season 1 episodes as monitored
+    api.episode
+        .monitorEpisodes(episodeIds: season1EpisodeIds, monitored: false)
+        .then(
+          (_) => print(
+            'Successfully updated monitoring status for season 1 episodes',
+          ),
+        );
+  });
 }

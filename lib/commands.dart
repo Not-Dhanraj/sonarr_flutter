@@ -33,6 +33,7 @@ part 'src/commands/episode.dart';
 part 'src/commands/episode/get_all_episodes.dart';
 part 'src/commands/episode/get_episode.dart';
 part 'src/commands/episode/update_episode.dart';
+part 'src/commands/episode/monitor_episode.dart';
 
 // History
 part 'src/commands/history.dart';
