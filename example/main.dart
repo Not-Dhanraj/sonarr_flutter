@@ -10,10 +10,10 @@ void main() async {
   Sonarr api = Sonarr(host: host, apiKey: key);
 
   // Get a specific series
-  api.series.getSeries(seriesId: 27).then((data) => print(data));
+  // api.series.getSeries(seriesId: 27).then((data) => print(data));
 
   // Example: Get all episodes for a series
-  api.episode.getSeriesEpisodes(seriesId: 27).then((episodes) {
+  api.episode.getSeriesEpisodes(seriesId: 27).then((episodes) async {
     // Get the IDs of all episodes in season 1
     List<int> season1EpisodeIds = episodes
         .where((episode) => episode.seasonNumber == 1 && episode.id != null)
@@ -21,6 +21,7 @@ void main() async {
         .toList();
 
     print(season1EpisodeIds.toString());
+    await api.queue.getQueue();
 
     // Set all season 1 episodes as monitored
     api.episode
